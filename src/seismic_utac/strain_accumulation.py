@@ -9,7 +9,7 @@ from seismic_utac.constants import K_ENERGY, R_LOADING
 
 def energy_released_J(M: float) -> float:
     """Seismic energy in Joules from Kanamori formula."""
-    return 10.0 ** (1.5 * M + 4.8)
+    return float(10.0 ** (1.5 * M + 4.8))
 
 
 class StrainAccumulationModel:

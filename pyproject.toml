@@ -45,6 +45,7 @@ dev = [
     "pytest-cov>=5.0.0",
     "mkdocs>=1.6.0",
     "mkdocs-material>=9.5.0",
+    "types-PyYAML>=6.0",
 ]
 
 [project.scripts]
@@ -91,9 +92,12 @@ strict = true
 warn_return_any = true
 warn_unused_configs = true
 ignore_missing_imports = true
+# Typer decorators are not fully typed upstream; suppress the decorator error
+disable_error_code = ["untyped-decorator", "import-untyped"]
 
 [dependency-groups]
 dev = [
     "pytest-cov>=7.0.0",
+    "types-pyyaml>=6.0.12.20260518",
 ]
 
