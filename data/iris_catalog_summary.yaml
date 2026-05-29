@@ -1,0 +1,10 @@
+catalog: IRIS Global Seismic Catalog
+n_events: 154383
+duration_years: 50
+magnitude_range: [0.01, 8.40]
+n_regions: 6
+b_value_global: 1.0
+b_value_uncertainty: 0.05
+omori_p_global: 1.1
+reference: "IRIS/USGS Global Seismic Network"
+url: "https://earthquake.usgs.gov/earthquakes/"

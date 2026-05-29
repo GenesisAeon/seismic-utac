@@ -1,0 +1,29 @@
+reference: "Bak & Tang (1989). DOI: 10.1029/JB094iB11p15635"
+title: "Earthquakes as a self-organized critical phenomenon"
+journal: "J. Geophys. Res. 94(B11), 15635"
+
+targets:
+  gr_power_law_exponent_tau:
+    expected: 1.0
+    tolerance: 0.05
+    description: "GR b-value = power-law exponent tau in 2D"
+  b_value_global:
+    expected: 1.0
+    tolerance: 0.10
+    description: "Global average Gutenberg-Richter b-value"
+  b_value_swarm_max:
+    expected: 2.5
+    tolerance: 0.30
+    description: "Maximum b-value in earthquake swarm sequences"
+  gamma_seismic:
+    expected: 0.200
+    tolerance: 0.03
+    description: "CREP Gamma for crustal SOC at b=1.7"
+  aftershock_omori_p:
+    expected: 1.1
+    tolerance: 0.10
+    description: "Omori-Utsu p-value for aftershock decay"
+  information_entropy_rate:
+    expected: "decreasing_before_M8"
+    tolerance: null
+    description: "Entropy decreases monotonically before major rupture (Al-Kindy 2003)"
