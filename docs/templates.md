@@ -1,6 +1,6 @@
-# Templates
+# Templates (diamond-setup)
 
-Diamond Setup ships two built-in templates. Adding your own is a single Python file.
+The `diamond-setup` scaffold tool ships two built-in templates for generating new GenesisAeon packages. Adding your own is a single Python file.
 
 ---
 

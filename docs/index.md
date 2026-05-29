@@ -1,37 +1,52 @@
-# Diamond Setup
+# seismic-utac
 
-**Universal Python project scaffold** — generate professional, CI-ready project skeletons in seconds.
+**Package 23 — Earthquake Seismicity & Gutenberg-Richter SOC**
+GenesisAeon · MOR Research Collective
 
-No cookiecutter, no Jinja2, no magic. Just a clean CLI, sensible templates, and a validator that keeps your projects healthy.
+Models global earthquake seismicity as a **UTAC** (Unified Threshold-Activated Criticality)
+system, grounding the Gutenberg-Richter power law as a CREP-mediated Self-Organized Critical
+(SOC) phenomenon. Calibrated against the IRIS 50-year global catalog (154,383 earthquakes).
 
 ## Quickstart
 
 ```bash
-pip install diamond-setup
-# or with uv:
-uv tool install diamond-setup
+pip install seismic-utac
+# or
+uv tool install seismic-utac
 ```
 
-```bash
-diamond scaffold my-new-tool
-cd my-new-tool && uv sync --dev && uv run pytest
+```python
+from seismic_utac import SeismicUTAC
+
+system = SeismicUTAC()
+result = system.run_cycle(duration_years=50.0)
+print(f"Γ = {result['gamma']:.4f}")          # ≈ 0.200
+print(f"b-value = {result['b_value']:.3f}")  # ≈ 1.7
+print(f"Phase events: {len(result['phase_events'])}")
 ```
 
-## Why Diamond Setup?
+## CREP Criticality Spectrum
 
-| Feature | diamond-setup | cookiecutter | copier |
-|---------|:---:|:---:|:---:|
-| Zero config needed | ✅ | ❌ | ❌ |
-| Built-in validator | ✅ | ❌ | ❌ |
-| Pure Python templates | ✅ | ❌ | ❌ |
-| `--dry-run` support | ✅ | ❌ | ✅ |
-| Extensible presets | ✅ | ✅ | ✅ |
+| Domain | Package | Γ |
+|--------|---------|---|
+| Qubit decoherence | P24 | 0.050 |
+| Apoptosis ATP threshold | P25 | 0.090 |
+| **Seismic b-value (GR)** | **P23** | **0.200** |
+| AMOC / Neural criticality | P18/P20 | 0.251 |
+| BTW Sandpile (SOC) | P22 | 0.296 |
 
-## Commands
+## CLI Commands
 
 | Command | Description |
 |---------|-------------|
-| `diamond scaffold <name>` | Create a new project |
-| `diamond list-templates` | Show available templates |
-| `diamond validate [path]` | Check a project's health |
-| `diamond version` | Show version |
+| `seismic-utac run` | Run a full UTAC seismic cycle |
+| `seismic-utac b-value-monitor` | Monitor b-value and phase risk |
+| `seismic-utac predict` | Forecast major event probability |
+| `seismic-utac benchmark` | Run Bak & Tang (1989) benchmarks |
+
+## References
+
+- Bak & Tang (1989). [DOI: 10.1029/JB094iB11p15635](https://doi.org/10.1029/JB094iB11p15635)
+- Al-Kindy & Main (2003). [DOI: 10.1029/2002JB002230](https://doi.org/10.1029/2002JB002230)
+- da Silva et al. (2021). [DOI: 10.1016/j.chaos.2020.110634](https://doi.org/10.1016/j.chaos.2020.110634)
+- IRIS Global Seismic Catalog: 154,383 earthquakes, 50-year record, 6 global regions

@@ -1,22 +1,27 @@
 [project]
-name = "diamond-setup"
-version = "1.0.0"
-description = "Universal Python project scaffold â€” generate professional project skeletons in seconds"
+name = "seismic-utac"
+version = "0.1.0"
+description = "Package 23: Earthquake Seismicity & Gutenberg-Richter SOC - UTAC/CREP model (GenesisAeon)"
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "GenesisAeon" }]
+authors = [{ name = "Johann Römer", email = "joberoemer@gmail.com" }]
+maintainers = [{ name = "GenesisAeon", email = "joberoemer@gmail.com" }]
 requires-python = ">=3.10"
-keywords = ["scaffold", "template", "cli", "project-generator", "skeleton"]
+keywords = [
+    "seismicity", "Gutenberg-Richter", "SOC", "self-organized-criticality",
+    "CREP", "UTAC", "b-value", "Omori-Utsu", "earthquake", "geophysics",
+    "entropy", "GenesisAeon",
+]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Environment :: Console",
-    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Software Development :: Code Generators",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Information Analysis",
 ]
 dependencies = [
     "typer>=0.12.0",
@@ -47,11 +52,12 @@ diamond = "diamond_setup.cli:app"
 seismic-utac = "seismic_utac.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/GenesisAeon/diamond-setup"
-Repository = "https://github.com/GenesisAeon/diamond-setup"
-Documentation = "https://genesisaeon.github.io/diamond-setup"
-Issues = "https://github.com/GenesisAeon/diamond-setup/issues"
+Homepage = "https://github.com/GenesisAeon/seismic-utac"
+Repository = "https://github.com/GenesisAeon/seismic-utac"
+Documentation = "https://genesisaeon.github.io/seismic-utac"
+Issues = "https://github.com/GenesisAeon/seismic-utac/issues"
 Zenodo = "https://doi.org/10.5281/zenodo.XXXXXXX"
+"Bak & Tang (1989)" = "https://doi.org/10.1029/JB094iB11p15635"
 
 [build-system]
 requires = ["hatchling"]
