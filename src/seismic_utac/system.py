@@ -15,8 +15,6 @@ from seismic_utac.constants import (
     GAMMA_SEISMIC,
     GAMMA_SEISMIC_TOL,
     M_MIN_COMPLETENESS,
-    OMORI_C,
-    OMORI_P,
     R_LOADING,
 )
 from seismic_utac.crep_seismic import SeismicCREP
@@ -65,7 +63,7 @@ class SeismicUTAC:
         Returns dict with Gamma, b_value, C, R, E, P, eta, and diagnostics.
         """
         mags = np.asarray(magnitudes, dtype=float)
-        b_value = kwargs.get("b_value", None)
+        b_value = kwargs.get("b_value")
         crep = self._crep.compute(mags, b_value=b_value)
 
         # Update b-value monitor
@@ -218,7 +216,13 @@ class SeismicUTAC:
             if e["magnitude"] >= 6.5
         ]
 
-        self._state = {**crep, "H": self._strain.H, "H_star": H_star}
+        # Also feed the b-value monitor so predict_major_event_probability() has data
+        for m in mags:
+            self._monitor.update(float(m))
+
+        self._state = {
+            **crep, "H": self._strain.H, "H_star": H_star, "phase_events_list": phase_events,
+        }
         return {
             "gamma": gamma,
             "b_value": sim["b_value_fitted"],
@@ -293,9 +297,10 @@ class SeismicUTAC:
         """
         from seismic_utac.constants import SIGMA
 
+        # Prefer the b-value from the last run_cycle if monitor has no data
         b = self._monitor.current_b()
         if b is None:
-            b = B_SOC_TYPICAL
+            b = float(self._state.get("b_value", B_SOC_TYPICAL))
         gamma = b_to_gamma(b)
 
         beta = b * math.log(10)

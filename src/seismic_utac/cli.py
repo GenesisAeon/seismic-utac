@@ -72,7 +72,7 @@ def predict(
     system = SeismicUTAC()
     system.run_cycle(duration_years=10.0)
     prob = system.predict_major_event_probability(magnitude=magnitude, horizon_days=float(horizon))
-    console.print(f"[bold]Seismic Forecast[/bold]")
+    console.print("[bold]Seismic Forecast[/bold]")
     console.print(f"  P(M≥{magnitude} within {horizon}d) = [yellow]{prob:.4f}[/yellow]")
 
 
@@ -92,7 +92,12 @@ def benchmark() -> None:
 
     for r in result["results"]:
         status = "[green]PASS[/green]" if r.passed else "[red]FAIL[/red]"
-        table.add_row(r.target_name, f"{r.expected:.3f} ± {r.tolerance:.3f}", f"{r.actual:.3f}", status)
+        table.add_row(
+            r.target_name,
+            f"{r.expected:.3f} ± {r.tolerance:.3f}",
+            f"{r.actual:.3f}",
+            status,
+        )
 
     console.print(table)
     console.print(f"\n{result['n_passed']}/{result['n_total']} targets passed")

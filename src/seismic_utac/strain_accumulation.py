@@ -58,7 +58,7 @@ class StrainAccumulationModel:
 
     def is_critical(self, gamma: float) -> bool:
         """Return True if current H exceeds critical threshold."""
-        return self.H >= self.H_star_from_gamma(gamma)
+        return self.H_star_from_gamma(gamma) <= self.H
 
     @property
     def history(self) -> list[float]:

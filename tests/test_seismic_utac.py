@@ -11,13 +11,11 @@ from seismic_utac.aftershock import OmoriUtsu
 from seismic_utac.b_value_monitor import BValueMonitor
 from seismic_utac.benchmark import run_benchmark
 from seismic_utac.catalog_loader import SeismicCatalogLoader
-from seismic_utac.constants import GAMMA_SEISMIC, GAMMA_SEISMIC_TOL, SIGMA
-from seismic_utac.crep_seismic import SeismicCREP
+from seismic_utac.constants import GAMMA_SEISMIC, GAMMA_SEISMIC_TOL
 from seismic_utac.entropy_seismic import SeismicEntropyAnalyzer
 from seismic_utac.gutenberg_richter import GutenbergRichterFitter, b_to_gamma
 from seismic_utac.strain_accumulation import StrainAccumulationModel
 from seismic_utac.system import SeismicUTAC
-
 
 # ---------------------------------------------------------------------------
 # GR b-value
@@ -75,7 +73,7 @@ def test_crep_gamma_target() -> None:
 def test_b_to_gamma_monotone() -> None:
     """Gamma should increase with b above 1.0."""
     gammas = [b_to_gamma(b) for b in [1.1, 1.3, 1.5, 1.7, 2.0, 2.5]]
-    assert all(g2 > g1 for g1, g2 in zip(gammas, gammas[1:]))
+    assert all(g2 > g1 for g1, g2 in zip(gammas, gammas[1:], strict=False))
 
 
 # ---------------------------------------------------------------------------
@@ -84,7 +82,9 @@ def test_b_to_gamma_monotone() -> None:
 
 def test_diamond_interface() -> None:
     """SeismicUTAC must have all 5 required Diamond contract methods."""
-    required = ["run_cycle", "get_crep_state", "get_utac_state", "get_phase_events", "to_zenodo_record"]
+    required = [
+        "run_cycle", "get_crep_state", "get_utac_state", "get_phase_events", "to_zenodo_record",
+    ]
     system = SeismicUTAC()
     for method in required:
         assert hasattr(system, method), f"Missing Diamond method: {method}"

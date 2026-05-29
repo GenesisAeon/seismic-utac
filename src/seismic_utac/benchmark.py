@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 from typing import Any
 
@@ -11,9 +10,7 @@ import numpy as np
 from seismic_utac.aftershock import OmoriUtsu
 from seismic_utac.catalog_loader import SeismicCatalogLoader
 from seismic_utac.constants import B_SOC_TYPICAL, GAMMA_SEISMIC, GAMMA_SEISMIC_TOL
-from seismic_utac.crep_seismic import SeismicCREP
 from seismic_utac.gutenberg_richter import GutenbergRichterFitter, b_to_gamma
-
 
 SEISMIC_TARGETS: dict[str, tuple[float, float]] = {
     "b_value_global": (1.0, 0.10),

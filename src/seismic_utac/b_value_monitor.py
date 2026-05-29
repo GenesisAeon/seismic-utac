@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import math
 from collections import deque
 
 import numpy as np

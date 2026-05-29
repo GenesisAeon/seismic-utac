@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import math
 from pathlib import Path
 from typing import Any
 
@@ -10,7 +9,6 @@ import numpy as np
 import yaml
 
 from seismic_utac.gutenberg_richter import generate_gr_magnitudes
-
 
 Event = dict[str, Any]
 

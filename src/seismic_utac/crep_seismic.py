@@ -2,11 +2,8 @@
 
 from __future__ import annotations
 
-import math
-
 import numpy as np
 
-from seismic_utac.constants import B_CRITICAL, B_MAX, SIGMA
 from seismic_utac.entropy_seismic import SeismicEntropyAnalyzer
 from seismic_utac.gutenberg_richter import GutenbergRichterFitter, b_to_gamma, crep_r_component
 
