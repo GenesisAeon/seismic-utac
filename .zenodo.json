@@ -1,0 +1,62 @@
+{
+  "title": "seismic-utac: Earthquake Seismicity & Gutenberg-Richter SOC (GenesisAeon Package 23)",
+  "version": "0.1.0",
+  "description": "UTAC/CREP model of global earthquake seismicity. Models the Gutenberg-Richter power law as a CREP-mediated Self-Organized Critical (SOC) phenomenon. Calibrated against the IRIS 50-year global catalog (154,383 earthquakes, magnitudes 0.01–8.40, 6 global regions). Implements the Diamond interface (run_cycle, get_crep_state, get_utac_state, get_phase_events, to_zenodo_record) and yields Γ_seismic ≈ 0.200 at the crustal SOC regime (b ≈ 1.7). Part of the GenesisAeon Entropy Atlas Expansion (Packages 23–30).",
+  "keywords": [
+    "seismicity",
+    "Gutenberg-Richter",
+    "SOC",
+    "self-organized criticality",
+    "CREP",
+    "UTAC",
+    "b-value",
+    "Omori-Utsu",
+    "earthquake",
+    "geophysics",
+    "entropy",
+    "GenesisAeon",
+    "Package 23"
+  ],
+  "creators": [
+    {
+      "name": "Römer, Johann",
+      "affiliation": "MOR Research Collective"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "10.1029/JB094iB11p15635",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1029/2002JB002230",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/j.chaos.2020.110634",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.19645351",
+      "relation": "isDocumentedBy",
+      "scheme": "doi",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "https://github.com/GenesisAeon/seismic-utac",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
+    }
+  ],
+  "language": "eng",
+  "notes": "GenesisAeon Entropy Atlas — Package 23 of 30. CREP criticality position: Γ ≈ 0.200 (crustal SOC regime). The b-value decrease before major earthquakes maps onto rising Γ — a falsifiable UTAC precursor signal testable against SCEDC real-time data."
+}

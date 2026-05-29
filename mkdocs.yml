@@ -1,8 +1,10 @@
-site_name: Diamond Setup
-site_description: Universal Python project scaffold — generate professional project skeletons in seconds
-site_author: GenesisAeon
-repo_url: https://github.com/GenesisAeon/diamond-setup
-repo_name: GenesisAeon/diamond-setup
+site_name: seismic-utac
+site_description: >-
+  Package 23 — Earthquake Seismicity & Gutenberg-Richter SOC.
+  UTAC/CREP model of global earthquake seismicity (GenesisAeon).
+site_author: GenesisAeon · MOR Research Collective
+repo_url: https://github.com/GenesisAeon/seismic-utac
+repo_name: GenesisAeon/seismic-utac
 
 theme:
   name: material
