@@ -1,6 +1,6 @@
 [project]
 name = "seismic-utac"
-version = "0.1.0"
+version = "1.0.0"
 description = "Package 23: Earthquake Seismicity & Gutenberg-Richter SOC - UTAC/CREP model (GenesisAeon)"
 readme = "README.md"
 license = { text = "MIT" }

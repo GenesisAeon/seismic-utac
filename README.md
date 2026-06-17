@@ -134,6 +134,13 @@ seismic-utac/
 - Al-Kindy & Main (2003). [DOI: 10.1029/2002JB002230](https://doi.org/10.1029/2002JB002230)
 - da Silva et al. (2021). [DOI: 10.1016/j.chaos.2020.110634](https://doi.org/10.1016/j.chaos.2020.110634)
 
+## Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PLACEHOLDER.svg)](https://doi.org/10.5281/zenodo.PLACEHOLDER)
+
+DOI will be assigned automatically on first GitHub Release once
+Zenodo–GitHub integration is enabled for this repo.
+
 ---
 
 Also includes the **diamond-setup** scaffold tool used to generate this project.
