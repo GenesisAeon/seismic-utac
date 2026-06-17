@@ -1,6 +1,6 @@
 {
   "title": "seismic-utac: Earthquake Seismicity & Gutenberg-Richter SOC (GenesisAeon Package 23)",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "UTAC/CREP model of global earthquake seismicity. Models the Gutenberg-Richter power law as a CREP-mediated Self-Organized Critical (SOC) phenomenon. Calibrated against the IRIS 50-year global catalog (154,383 earthquakes, magnitudes 0.01–8.40, 6 global regions). Implements the Diamond interface (run_cycle, get_crep_state, get_utac_state, get_phase_events, to_zenodo_record) and yields Γ_seismic ≈ 0.200 at the crustal SOC regime (b ≈ 1.7). Part of the GenesisAeon Entropy Atlas Expansion (Packages 23–30).",
   "keywords": [
     "seismicity",
