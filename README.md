@@ -34,6 +34,12 @@ UTAC precursor signal.
 ## Install
 
 ```bash
+pip install seismic-utac
+```
+
+For development:
+
+```bash
 pip install -e ".[dev]"
 # or
 uv sync --dev
