@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "seismic-utac"
+version: "1.0.0"
+date-released: "2026-06-17"
+authors:
+  - family-names: Römer
+    given-names: Johann
+    email: joberoemer@gmail.com
+repository-code: "https://github.com/GenesisAeon/seismic-utac"
+license: MIT
+abstract: "Package 23: Earthquake Seismicity & Gutenberg-Richter SOC - UTAC/CREP model (GenesisAeon)"
+keywords:
+  - GenesisAeon
+  - UTAC
+  - CREP
+  - open-science
+  - seismicity
+  - Gutenberg-Richter
+  - SOC
+  - self-organized-criticality
