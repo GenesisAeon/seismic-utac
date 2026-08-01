@@ -14,4 +14,4 @@ M_MIN_COMPLETENESS: float = 2.5
 LOG10_E: float = math.log10(math.e)  # = 1/ln(10) ~= 0.4343
 PACKAGE_ID: int = 23
 PACKAGE_NAME: str = "seismic-utac"
-ZENODO_DOI: str = "10.1029/JB094iB11p15635"
+ZENODO_DOI: str = "10.5281/zenodo.20842889"

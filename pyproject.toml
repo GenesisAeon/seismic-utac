@@ -58,7 +58,7 @@ Homepage = "https://github.com/GenesisAeon/seismic-utac"
 Repository = "https://github.com/GenesisAeon/seismic-utac"
 Documentation = "https://genesisaeon.github.io/seismic-utac"
 Issues = "https://github.com/GenesisAeon/seismic-utac/issues"
-Zenodo = "https://doi.org/10.5281/zenodo.XXXXXXX"
+Zenodo = "https://doi.org/10.5281/zenodo.20842889"
 "Bak & Tang (1989)" = "https://doi.org/10.1029/JB094iB11p15635"
 
 [build-system]
